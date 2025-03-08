@@ -1,0 +1,18 @@
+# Task 1: Prompt the user for input and print it back
+user_input = input("Enter some text: ")
+print("You entered:", user_input)
+
+# Task 2: Open a text file, store the user's input, and close the file
+file_name = "user_input.txt"
+with open(file_name, "w") as file:
+    file.write(user_input + "\n")  # Writing the input to a file
+
+print(f"Your input has been saved to {file_name}")
+
+# Task 3: Ask for another input and append it to the file
+additional_input = input("Enter more text to append: ")
+
+with open(file_name, "a") as file:  # Open in append mode
+    file.write(additional_input + "\n")  
+
+print(f"Additional input has been appended to {file_name}")
