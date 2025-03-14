@@ -1,0 +1,20 @@
+# Task 1: Prompt the user for input and print it back
+var1 = input("Type something to save to a file: ")
+print("You typed: " ,var1,)
+
+# Task 2: Open a text file, store the user's input, and close the file
+
+file_name = "text.txt"
+file = open(file_name, "w")  # Open the file in write mode
+file.write(var1 + "\n")
+file.close()  # Closes the file
+
+print("Your input (" , var1, ") has been saved to " + file_name )
+
+# Task 3:  Ask the user for another input. Re-open the file, but this time APPEND the text to the file.
+
+var2 = input("Type something else: ")  # Asking user for more input
+
+file = open(file_name, "a") # Opening the file again to append it with new user input
+file.write(var2)
+file.close()
